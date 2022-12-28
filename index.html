@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário || GN</title>
+    <link rel="shortcut icon" href="../_Media/icons8-old-vmware-logo-50.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="box">
+        <form action="" id="fm">
+            <fieldset>
+                <legend><b>Formulário de clientes</b></legend>
+                <br>
+                
+                <div class="inputBox">
+                    <input type="text" nome="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" nome="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+
+                <br>
+
+                <div class="inputBox">
+                    <input type="tel" nome="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+
+                <br>
+
+                    <p>Gênero</p>
+                    
+                    <input type="radio" id="masculino" name="genero" value="Masculino" required>
+                    <label for="masculino">Masculino</label>
+                        <br>            
+                    <input type="radio" id="feminino" name="genero" value="Feminino" required>
+                    <label for="feminino">Feminino</label>
+                        <br>
+                    <input type="radio" id="outro" name="genero" value="Outro" required>
+                    <label for="outro">Outro</label>
+                
+                        <br><br>
+                    <label for="anoNascimento"><b>Data de Nascimento</b></label>
+                    <input type="date" name="anoNascimento" id="anoNascimento" required>
+
+                    <br>
+
+                <div class="inputBox">
+                    <input type="text" nome="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cidade</label>
+                </div>
+
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" nome="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput">Estado</label>
+                </div>
+
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" nome="endereço" id="endereço" class="inputUser" required>
+                    <label for="endereço" class="labelInput">Endereço</label>
+                </div>
+
+                <br>
+
+                <input type="submit" name="submit" id="submit">
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
