@@ -15,6 +15,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,7 +51,7 @@ public class FormController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Object> getOneProfessor(@PathVariable(value = "id") UUID id){
+    public ResponseEntity<Object> getOnePessoa(@PathVariable(value = "id") UUID id){
         Optional<Pessoa> pessoa = formService.findById(id);
         if (!pessoa.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pessoa not found.");
@@ -58,5 +59,14 @@ public class FormController {
         return ResponseEntity.status(HttpStatus.OK).body(pessoa.get());
     }
     
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> deleteProfessor(@PathVariable(value = "id") UUID id){
+        Optional<Pessoa> pessoaOptional = formService.findById(id);
+        if (!pessoaOptional.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Professor not found.");
+        }
+        formService.delete(pessoaOptional.get());
+        return ResponseEntity.status(HttpStatus.OK).body("Professor deleted successfully.");
+    }
     
 }

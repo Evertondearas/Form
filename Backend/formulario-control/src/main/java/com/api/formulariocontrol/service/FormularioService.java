@@ -35,5 +35,9 @@ public class FormularioService {
     public Optional<Pessoa> findById(UUID id){
         return formRepository.findById(id);
     }
+
+    public void delete(Pessoa pessoa) {
+        formRepository.delete(pessoa);
+    }
     
 }
