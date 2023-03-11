@@ -9,7 +9,6 @@ import com.api.formulariocontrol.model.Pessoa;
 import com.api.formulariocontrol.service.FormularioService;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 import javax.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
@@ -31,7 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/formulario")
-public class FormController {
+public class FormController implements IFormControl{
     
     final FormularioService formService;
 
@@ -39,6 +38,7 @@ public class FormController {
         this.formService = formService;
     }
     
+    @Override
     @PostMapping
     public ResponseEntity<Object> saveFormulario(@RequestBody @Valid FormDto formDto){
         Pessoa pessoa = new Pessoa();
@@ -46,13 +46,15 @@ public class FormController {
         return ResponseEntity.status(HttpStatus.CREATED).body(formService.save(pessoa));
     }
     
+    @Override
     @GetMapping
     public ResponseEntity<List<Pessoa>> getAllFormulario(){
         return ResponseEntity.status(HttpStatus.CREATED).body(formService.findAll());
     }
     
+    @Override
     @GetMapping("/{id}")
-    public ResponseEntity<Object> getOneFormulario(@PathVariable(value = "id") UUID id){
+    public ResponseEntity<Object> getOneFormulario(@PathVariable(value = "id") Long id){
         Optional<Pessoa> pessoa = formService.findById(id);
         if (!pessoa.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pessoa not found.");
@@ -60,8 +62,9 @@ public class FormController {
         return ResponseEntity.status(HttpStatus.OK).body(pessoa.get());
     }
     
+    @Override
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteFormulario(@PathVariable(value = "id") UUID id){
+    public ResponseEntity<Object> deleteFormulario(@PathVariable(value = "id") Long id){
         Optional<Pessoa> pessoaOptional = formService.findById(id);
         if (!pessoaOptional.isPresent()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pessoa not found.");
@@ -70,8 +73,9 @@ public class FormController {
         return ResponseEntity.status(HttpStatus.OK).body("Pessoa deleted successfully.");
     }
     
+    @Override
     @PutMapping("/{id}")
-    public ResponseEntity<Object> updateFormulario(@PathVariable(value = "id") UUID id,
+    public ResponseEntity<Object> updateFormulario(@PathVariable(value = "id") Long id,
                                                     @RequestBody @Valid FormDto formDto){
         Optional<Pessoa> pessoaOptional = formService.findById(id);
         if (!pessoaOptional.isPresent()) {
