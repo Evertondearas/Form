@@ -1,5 +1,4 @@
-
-<h1>Projeto Formulário </h1> 
+Projeto Formulário
 
 <p>Desenvolvedor Front-end Everton <br>
    Desenvolvedor Back-end João Paulo
@@ -14,8 +13,8 @@
 </p>
 
 <h2>Como acessar</h2>
-<p>Abra o Git Bash na pasta selecionada e faça o comando: <br>
-</p>
+<p>Abra o Git Bash na pasta selecionada e faça o comando: <br></p>
 ```
-git clone https://github.com/ubheytch/Form
+git clone 
 ```
+
