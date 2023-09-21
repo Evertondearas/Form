@@ -9,7 +9,7 @@
 
 <h2>Conteúdo</h2>
 <p>Front-end: HTML, CSS e JavaScript <br>
-   Back-end: Spring boot ou Node.js(futuramente)
+   Back-end: Spring boot 
 </p>
 
 <h2>Como acessar</h2>
