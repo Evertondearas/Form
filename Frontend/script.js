@@ -15,7 +15,8 @@ function getPessoa(){
     obj.email = document.getElementById("email").value;
     obj.telefone = document.getElementById("telefone").value;
     obj.data_nasc = document.getElementById("anoNascimento").value;
-    var busca = document.getElementById("genero")
+    let busca = document.getElementsByName("genero")
+    obj.sexo = ""
     for(var i = 0; i < busca.length; i++){            
         if(busca[i].checked && busca[i].value == "Masculino"){            
             obj.sexo = "Masculino"
