@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FormularioControlApplication<formulario-control>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.api.formulariocontrol.FormularioControlApplication",
+            "projectName": "formulario-control",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
