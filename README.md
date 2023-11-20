@@ -9,8 +9,8 @@
 
 <h2>Screenshoots do projeto</h2>
 <div>
-   <img src="https://github.com/Evertondearas/Form/assets/87874652/5bb02a20-643e-4ed8-b3f0-5aa6750b7f7f" width="500px">
-   <img src="https://github.com/Evertondearas/Form/assets/87874652/18461634-4c42-4c85-9d22-1e04aad95f9a" width="500px">
+   <img src="https://github.com/Evertondearas/Form/assets/87874652/5bb02a20-643e-4ed8-b3f0-5aa6750b7f7f" width="300px">
+   <img src="https://github.com/Evertondearas/Form/assets/87874652/18461634-4c42-4c85-9d22-1e04aad95f9a" width="300px">
 </div>
 
 <h2>Conteúdo</h2>
